@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Candle Grove Home Care | Where Care Feels Like Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --navy:#1f3767;
-      --navy-dark:#13294b;
-      --gold:#b8924f;
-      --gold-soft:#d8c19a;
-      --cream:#f5f0e8;
+      --navy:#2f466d;
+      --navy2:#3f5f93;
+      --gold:#b99357;
+      --gold-dark:#9b7842;
+      --cream:#f5efe7;
+      --text:#3b3128;
+      --muted:#8e8478;
       --white:#ffffff;
-      --text:#253245;
-      --muted:#7c8594;
-      --shadow:0 12px 28px rgba(20,36,68,.18);
-      --max:1200px;
+      --shadow:0 12px 28px rgba(24,32,48,.18);
+      --max:1220px;
     }
 
     *{box-sizing:border-box}
@@ -26,7 +26,7 @@
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
-      background:#fff;
+      background:#f7f2eb;
       line-height:1.5;
     }
 
@@ -39,43 +39,40 @@
     }
 
     .topbar{
-      background:linear-gradient(90deg,var(--navy-dark),#315d9e);
+      background:linear-gradient(90deg,var(--navy),var(--navy2));
       color:#fff;
-      font-size:12px;
       padding:8px 0;
+      font-size:12px;
     }
 
     .topbar-flex{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:14px;
+      gap:12px;
       flex-wrap:wrap;
     }
 
+    .topbar a{
+      color:#fff;
+    }
+
     .navbar{
-      background:rgba(255,255,255,.96);
-      border-bottom:1px solid #e8e4dd;
-      padding:14px 0;
+      background:#fbf6ef;
+      border-bottom:1px solid #e7ddd0;
+      padding:10px 0;
     }
 
     .nav-flex{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:20px;
+      gap:18px;
       flex-wrap:wrap;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      min-width:0;
-    }
-
     .brand img{
-      height:78px;
+      height:70px;
       width:auto;
       object-fit:contain;
     }
@@ -86,36 +83,35 @@
       gap:22px;
       flex-wrap:wrap;
       font-size:15px;
-      color:#485260;
+      color:#5d6573;
     }
 
     .nav-links a:hover{
-      color:var(--navy);
+      color:#1f3767;
     }
 
     .hero{
       position:relative;
       background:
-        linear-gradient(rgba(20,27,40,.45), rgba(20,27,40,.45)),
-        url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+        linear-gradient(rgba(77,58,43,.42), rgba(77,58,43,.42)),
+        url('https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
       color:#fff;
-      padding:52px 0 44px;
-      overflow:hidden;
+      padding:46px 0 34px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:36px;
+      grid-template-columns:1.15fr .85fr;
+      gap:34px;
       align-items:center;
     }
 
     .eyebrow{
       display:inline-block;
-      padding:10px 18px;
+      padding:10px 16px;
       border-radius:999px;
-      background:rgba(255,255,255,.13);
-      border:1px solid rgba(255,255,255,.26);
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.24);
       backdrop-filter:blur(3px);
       font-size:14px;
       margin-bottom:18px;
@@ -123,33 +119,33 @@
     }
 
     .hero h1{
-      margin:0 0 16px;
-      font-size:62px;
+      margin:0 0 14px;
+      font-family:'Cormorant Garamond', serif;
+      font-size:60px;
       line-height:.98;
-      font-weight:700;
-      letter-spacing:-.5px;
+      font-weight:600;
       color:#fff;
       max-width:760px;
-      text-shadow:0 3px 14px rgba(0,0,0,.25);
+      text-shadow:0 2px 10px rgba(0,0,0,.16);
     }
 
     .hero-copy{
-      max-width:760px;
-      font-size:18px;
-      color:#f0f3f8;
-      margin:0 0 22px;
+      max-width:720px;
+      font-size:17px;
+      color:#f3f3f5;
+      margin:0 0 18px;
     }
 
     .hero-actions{
       display:flex;
-      gap:16px;
+      gap:14px;
       flex-wrap:wrap;
-      margin-bottom:18px;
+      margin-bottom:14px;
     }
 
     .btn{
       display:inline-block;
-      padding:14px 28px;
+      padding:13px 26px;
       border-radius:999px;
       font-weight:700;
       font-size:16px;
@@ -157,21 +153,21 @@
     }
 
     .btn-gold{
-      background:linear-gradient(180deg,#c8a46b,#a87d36);
+      background:linear-gradient(180deg,#c8a46b,#a9803d);
       color:#fff;
     }
 
     .btn-light{
-      background:#fff;
-      color:var(--navy-dark);
+      background:#f5f1ea;
+      color:#2a3342;
     }
 
     .hero-points{
       display:grid;
-      grid-template-columns:repeat(2,minmax(220px,1fr));
+      grid-template-columns:repeat(2,minmax(230px,1fr));
       gap:10px 26px;
       max-width:760px;
-      color:#f8f9fb;
+      color:#f8f8f9;
       font-size:15px;
     }
 
@@ -180,19 +176,19 @@
     }
 
     .trust-box{
-      background:rgba(58,58,58,.36);
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:26px;
-      padding:28px 30px;
-      backdrop-filter:blur(6px);
+      background:rgba(79,70,61,.36);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:24px;
+      padding:26px 28px;
+      backdrop-filter:blur(5px);
       box-shadow:var(--shadow);
       color:#fff;
     }
 
     .trust-box h3{
-      margin:0 0 18px;
-      font-size:24px;
-      line-height:1.25;
+      margin:0 0 16px;
+      font-size:22px;
+      line-height:1.3;
       color:#fff;
     }
 
@@ -204,9 +200,9 @@
 
     .trust-box li{
       padding:14px 0;
-      border-bottom:1px solid rgba(255,255,255,.14);
+      border-bottom:1px solid rgba(255,255,255,.12);
       font-size:17px;
-      color:#f9f9fb;
+      color:#f7f7f8;
     }
 
     .trust-box li:last-child{
@@ -214,17 +210,17 @@
     }
 
     section{
-      padding:30px 0 42px;
-      background:#f6f1ea;
+      background:#f7f2eb;
+      padding:26px 0 36px;
     }
 
     .section-title{
-      margin:0 0 18px;
+      margin:0 0 22px;
       text-align:center;
       font-family:'Cormorant Garamond', serif;
-      font-size:34px;
+      font-size:32px;
       font-weight:600;
-      color:#2c3544;
+      color:#4a4036;
     }
 
     .cards{
@@ -234,16 +230,16 @@
     }
 
     .card{
-      background:#fffdf9;
-      border:1px solid #e7ddd0;
+      background:#fbf7f1;
+      border:1px solid #e6ddd0;
       border-radius:16px;
       overflow:hidden;
-      box-shadow:0 8px 22px rgba(33,42,63,.10);
+      box-shadow:0 8px 20px rgba(35,44,58,.10);
     }
 
     .card img{
       width:100%;
-      height:155px;
+      height:150px;
       object-fit:cover;
     }
 
@@ -255,52 +251,22 @@
       margin:0 0 8px;
       font-family:'Cormorant Garamond', serif;
       font-size:18px;
-      font-weight:600;
-      color:#263245;
+      color:#3b3128;
     }
 
     .card p{
       margin:0;
-      color:#5f6877;
+      color:#6d655d;
       font-size:14px;
-      line-height:1.5;
-    }
-
-    .lower-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      margin-top:28px;
-    }
-
-    .lower-card{
-      background:#fffdf9;
-      border:1px solid #e7ddd0;
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 8px 22px rgba(33,42,63,.08);
-      text-align:center;
-    }
-
-    .lower-card h4{
-      margin:0 0 8px;
-      font-family:'Cormorant Garamond', serif;
-      font-size:22px;
-      color:#2b3444;
-    }
-
-    .lower-card p{
-      margin:0;
-      font-size:14px;
-      color:#606977;
+      line-height:1.45;
     }
 
     .footer{
-      background:#f2ede6;
-      border-top:1px solid #e4ddd1;
-      padding:22px 0;
+      background:#f2ebe2;
+      border-top:1px solid #e3d7c8;
+      padding:18px 0;
       text-align:center;
-      color:#6d7481;
+      color:#756d64;
       font-size:14px;
     }
 
@@ -309,13 +275,12 @@
         grid-template-columns:1fr;
       }
 
-      .cards,
-      .lower-grid{
+      .cards{
         grid-template-columns:1fr 1fr;
       }
 
       .hero h1{
-        font-size:52px;
+        font-size:48px;
       }
     }
 
@@ -330,15 +295,15 @@
       }
 
       .brand img{
-        height:66px;
+        height:62px;
       }
 
       .hero{
-        padding:40px 0 36px;
+        padding:38px 0 30px;
       }
 
       .hero h1{
-        font-size:40px;
+        font-size:38px;
       }
 
       .hero-copy{
@@ -349,8 +314,7 @@
         grid-template-columns:1fr;
       }
 
-      .cards,
-      .lower-grid{
+      .cards{
         grid-template-columns:1fr;
       }
 
@@ -364,8 +328,15 @@
 
   <div class="topbar">
     <div class="container topbar-flex">
-      <div>Compassionate non-medical home care with a professional, client-centered approach.</div>
-      <div>Call: (216) XXX-XXXX | Email: info@candlegrovehomecare.com</div>
+      <div>Professional home care for families, hospitals, and referral partners.</div>
+      <div>Call (216) XXX-XXXX &nbsp; | &nbsp; Email: info@candlegrovehomecare.com</div>
+    </div>
+  </div>
+
+  <div class="topbar" style="padding:6px 0; background:linear-gradient(90deg,#29416a,#35598f);">
+    <div class="container topbar-flex">
+      <div>☐ &nbsp; Call&nbsp; Contact us&nbsp; (216) XXX-XXXX</div>
+      <div>Call (216) XXX-XXXX &nbsp; | &nbsp; Email: info@candlegrovehomecare.com</div>
     </div>
   </div>
 
@@ -377,6 +348,7 @@
 
       <div class="nav-links">
         <a href="#services">Services</a>
+        <a href="#about">About Us</a>
         <a href="#partners">Referral Partners</a>
         <a href="#medicaid">Passport &amp; Medicaid</a>
         <a href="#careers">Careers</a>
@@ -414,7 +386,6 @@
           <li>Personalized non-medical support at home</li>
           <li>Professional presentation for hospitals and social workers</li>
           <li>Dependable scheduling and ongoing communication</li>
-          <li>Strong foundation for Passport and Medicaid growth</li>
         </ul>
       </div>
     </div>
@@ -426,7 +397,7 @@
 
       <div class="cards">
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=900&q=80" alt="Personalized support at home">
+          <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=900&q=80" alt="Personalized support at home">
           <div class="card-body">
             <h4>Personalized Support at Home</h4>
             <p>Care tailored to fit the unique needs and preferences of each client.</p>
@@ -434,7 +405,7 @@
         </div>
 
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Professional trusted team">
+          <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=900&q=80" alt="Professional and trusted team">
           <div class="card-body">
             <h4>Professional &amp; Trusted Team</h4>
             <p>Experienced, thoroughly vetted caregivers trained to provide compassionate, dignified care.</p>
@@ -442,35 +413,22 @@
         </div>
 
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1576765607924-3e1a0c5c7f5b?auto=format&fit=crop&w=900&q=80" alt="Dependable scheduling">
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Dependable scheduling">
           <div class="card-body">
             <h4>Dependable Scheduling</h4>
             <p>Timely arrival, consistent care, and regular updates to keep families informed.</p>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="lower-grid">
-        <div class="lower-card" id="partners">
-          <h4>Referral Partners</h4>
-          <p>Professional support for hospitals, social workers, and referral sources seeking dependable in-home care solutions.</p>
-        </div>
-
-        <div class="lower-card" id="medicaid">
-          <h4>Passport &amp; Medicaid</h4>
-          <p>Strong foundation for continued growth in Ohio’s Passport and Medicaid-related care environment.</p>
-        </div>
-
-        <div class="lower-card" id="careers">
-          <h4>Careers</h4>
-          <p>Meaningful opportunities for compassionate caregivers who want to make a real difference every day.</p>
-        </div>
-
-        <div class="lower-card" id="contact">
-          <h4>Contact</h4>
-          <p>Call (216) XXX-XXXX or email info@candlegrovehomecare.com to request care or discuss referral needs.</p>
-        </div>
-      </div>
+  <section id="about" style="padding-top:0;">
+    <div class="container" style="text-align:center; color:#6f665d; font-size:14px;">
+      <div id="partners" style="display:inline-block; margin:8px 14px;">Referral Partners</div>
+      <div id="medicaid" style="display:inline-block; margin:8px 14px;">Passport &amp; Medicaid</div>
+      <div id="careers" style="display:inline-block; margin:8px 14px;">Careers</div>
+      <div id="contact" style="display:inline-block; margin:8px 14px;">Contact</div>
     </div>
   </section>
 
