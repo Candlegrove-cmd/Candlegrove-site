@@ -1,1 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Candle Grove Home Care | Where Care Feels Like Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    :root{
+      --navy:#1f3767;
+      --navy-dark:#13294b;
+      --gold:#b8924f;
+      --gold-soft:#d8c19a;
+      --cream:#f5f0e8;
+      --white:#ffffff;
+      --text:#253245;
+      --muted:#7c8594;
+      --shadow:0 12px 28px rgba(20,36,68,.18);
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.5;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+
+    .container{
+      width:min(94%, var(--max));
+      margin:0 auto;
+    }
+
+    .topbar{
+      background:linear-gradient(90deg,var(--navy-dark),#315d9e);
+      color:#fff;
+      font-size:12px;
+      padding:8px 0;
+    }
+
+    .topbar-flex{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .navbar{
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid #e8e4dd;
+      padding:14px 0;
+    }
+
+    .nav-flex{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .brand img{
+      height:78px;
+      width:auto;
+      object-fit:contain;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      flex-wrap:wrap;
+      font-size:15px;
+      color:#485260;
+    }
+
+    .nav-links a:hover{
+      color:var(--navy);
+    }
+
+    .hero{
+      position:relative;
+      background:
+        linear-gradient(rgba(20,27,40,.45), rgba(20,27,40,.45)),
+        url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color:#fff;
+      padding:52px 0 44px;
+      overflow:hidden;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:36px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,.13);
+      border:1px solid rgba(255,255,255,.26);
+      backdrop-filter:blur(3px);
+      font-size:14px;
+      margin-bottom:18px;
+      color:#f7f8fb;
+    }
+
+    .hero h1{
+      margin:0 0 16px;
+      font-size:62px;
+      line-height:.98;
+      font-weight:700;
+      letter-spacing:-.5px;
+      color:#fff;
+      max-width:760px;
+      text-shadow:0 3px 14px rgba(0,0,0,.25);
+    }
+
+    .hero-copy{
+      max-width:760px;
+      font-size:18px;
+      color:#f0f3f8;
+      margin:0 0 22px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      border-radius:999px;
+      font-weight:700;
+      font-size:16px;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-gold{
+      background:linear-gradient(180deg,#c8a46b,#a87d36);
+      color:#fff;
+    }
+
+    .btn-light{
+      background:#fff;
+      color:var(--navy-dark);
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(220px,1fr));
+      gap:10px 26px;
+      max-width:760px;
+      color:#f8f9fb;
+      font-size:15px;
+    }
+
+    .hero-points span{
+      white-space:nowrap;
+    }
+
+    .trust-box{
+      background:rgba(58,58,58,.36);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:26px;
+      padding:28px 30px;
+      backdrop-filter:blur(6px);
+      box-shadow:var(--shadow);
+      color:#fff;
+    }
+
+    .trust-box h3{
+      margin:0 0 18px;
+      font-size:24px;
+      line-height:1.25;
+      color:#fff;
+    }
+
+    .trust-box ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .trust-box li{
+      padding:14px 0;
+      border-bottom:1px solid rgba(255,255,255,.14);
+      font-size:17px;
+      color:#f9f9fb;
+    }
+
+    .trust-box li:last-child{
+      border-bottom:none;
+    }
+
+    section{
+      padding:30px 0 42px;
+      background:#f6f1ea;
+    }
+
+    .section-title{
+      margin:0 0 18px;
+      text-align:center;
+      font-family:'Cormorant Garamond', serif;
+      font-size:34px;
+      font-weight:600;
+      color:#2c3544;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:#fffdf9;
+      border:1px solid #e7ddd0;
+      border-radius:16px;
+      overflow:hidden;
+      box-shadow:0 8px 22px rgba(33,42,63,.10);
+    }
+
+    .card img{
+      width:100%;
+      height:155px;
+      object-fit:cover;
+    }
+
+    .card-body{
+      padding:14px 16px 18px;
+    }
+
+    .card h4{
+      margin:0 0 8px;
+      font-family:'Cormorant Garamond', serif;
+      font-size:18px;
+      font-weight:600;
+      color:#263245;
+    }
+
+    .card p{
+      margin:0;
+      color:#5f6877;
+      font-size:14px;
+      line-height:1.5;
+    }
+
+    .lower-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .lower-card{
+      background:#fffdf9;
+      border:1px solid #e7ddd0;
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 8px 22px rgba(33,42,63,.08);
+      text-align:center;
+    }
+
+    .lower-card h4{
+      margin:0 0 8px;
+      font-family:'Cormorant Garamond', serif;
+      font-size:22px;
+      color:#2b3444;
+    }
+
+    .lower-card p{
+      margin:0;
+      font-size:14px;
+      color:#606977;
+    }
+
+    .footer{
+      background:#f2ede6;
+      border-top:1px solid #e4ddd1;
+      padding:22px 0;
+      text-align:center;
+      color:#6d7481;
+      font-size:14px;
+    }
+
+    @media (max-width: 1100px){
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .cards,
+      .lower-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero h1{
+        font-size:52px;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav-flex{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        gap:14px;
+      }
+
+      .brand img{
+        height:66px;
+      }
+
+      .hero{
+        padding:40px 0 36px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero-copy{
+        font-size:16px;
+      }
+
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+
+      .cards,
+      .lower-grid{
+        grid-template-columns:1fr;
+      }
+
+      .section-title{
+        font-size:28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-flex">
+      <div>Compassionate non-medical home care with a professional, client-centered approach.</div>
+      <div>Call: (216) XXX-XXXX | Email: info@candlegrovehomecare.com</div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="brand">
+        <img src="logo.png" alt="Candle Grove Home Care logo">
+      </div>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#partners">Referral Partners</a>
+        <a href="#medicaid">Passport &amp; Medicaid</a>
+        <a href="#careers">Careers</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Professional Home Care for Families, Hospitals, and Referral Partners</div>
+
+        <h1>Trusted, compassionate home care built on dignity, trust, and compassion.</h1>
+
+        <p class="hero-copy">
+          Candle Grove Home Care provides professional, personalized non-medical support to help families care for their loved ones with warmth, dignity, and respect.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-gold">Request Care</a>
+          <a href="#careers" class="btn btn-light">Apply as a Caregiver</a>
+        </div>
+
+        <div class="hero-points">
+          <span>✔ Personalized care tailored to each client</span>
+          <span>✔ Trusted by hospitals and referral partners</span>
+          <span>✔ Dependable scheduling and communication</span>
+          <span>✔ Serving Northeast Ohio</span>
+        </div>
+      </div>
+
+      <div class="trust-box">
+        <h3>Why families and referral partners choose us</h3>
+        <ul>
+          <li>Personalized non-medical support at home</li>
+          <li>Professional presentation for hospitals and social workers</li>
+          <li>Dependable scheduling and ongoing communication</li>
+          <li>Strong foundation for Passport and Medicaid growth</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Compassionate, Reliable Services Tailored to Each Client</h2>
+
+      <div class="cards">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=900&q=80" alt="Personalized support at home">
+          <div class="card-body">
+            <h4>Personalized Support at Home</h4>
+            <p>Care tailored to fit the unique needs and preferences of each client.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80" alt="Professional trusted team">
+          <div class="card-body">
+            <h4>Professional &amp; Trusted Team</h4>
+            <p>Experienced, thoroughly vetted caregivers trained to provide compassionate, dignified care.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1576765607924-3e1a0c5c7f5b?auto=format&fit=crop&w=900&q=80" alt="Dependable scheduling">
+          <div class="card-body">
+            <h4>Dependable Scheduling</h4>
+            <p>Timely arrival, consistent care, and regular updates to keep families informed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lower-grid">
+        <div class="lower-card" id="partners">
+          <h4>Referral Partners</h4>
+          <p>Professional support for hospitals, social workers, and referral sources seeking dependable in-home care solutions.</p>
+        </div>
+
+        <div class="lower-card" id="medicaid">
+          <h4>Passport &amp; Medicaid</h4>
+          <p>Strong foundation for continued growth in Ohio’s Passport and Medicaid-related care environment.</p>
+        </div>
+
+        <div class="lower-card" id="careers">
+          <h4>Careers</h4>
+          <p>Meaningful opportunities for compassionate caregivers who want to make a real difference every day.</p>
+        </div>
+
+        <div class="lower-card" id="contact">
+          <h4>Contact</h4>
+          <p>Call (216) XXX-XXXX or email info@candlegrovehomecare.com to request care or discuss referral needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    © 2026 Candle Grove Home Care. All rights reserved.
+  </footer>
+
+</body>
+</html>
